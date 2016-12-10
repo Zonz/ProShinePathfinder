@@ -9,6 +9,8 @@ local DialogSolver  = require (cdpath .. "Lib/MoveTo/DialogSolver")
 local moveToMapCell = require (cdpath .. "Lib/MoveTo/MoveToMapCell")
 local Pokecenter    = require (cdpath .. "Lib/MoveTo/Pokecenter")
 local Pokemart      = require (cdpath .. "Lib/MoveTo/Pokemart")
+local PokemonEV     = require (cdpath .. "Lib/Pokemon/PokemonEV")
+local MapSpawn      = require (cdpath .. "Lib/Pokemon/MapSpawn")
 
 return {
     getPath = PathFinder.getPath,
@@ -20,4 +22,6 @@ return {
     isDigPathEnabled = PathFinder.isDigPathEnabled,
     enableDigPath = PathFinder.enableDigPath,
     disableDigPath = PathFinder.disableDigPath,
+    getPokemonEV = PokemonEV.getPokemonEV,
+    getMapSpawn = MapSpawn.getMapSpawn,
 }
