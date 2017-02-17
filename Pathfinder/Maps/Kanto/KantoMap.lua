@@ -242,7 +242,7 @@ KantoMap["Route 2 House"] = {["Route 2_B"] = {1}}
 KantoMap["Route 2 Stop"] = {["Viridian Forest"] = {0.2}, ["Route 2_C"] = {0.2}}
 KantoMap["Route 2 Stop2"] = {["Route 2_A"] = {0.2}, ["Viridian Forest"] = {0.2}}
 KantoMap["Route 2 Stop3"] = {["Route 2_B"] = {0.2}, ["Route 2_D"] = {0.2}}
-KantoMap["Route 20_A"] = {["Seafoam 1F_A"] = {1, {["abilities"] = {"surf"}}, ["Cinnabar Island"] = {1.5, {["abilities"] = {"surf"}}}}}
+KantoMap["Route 20_A"] = {["Seafoam 1F_A"] = {1, {["abilities"] = {"surf"}}}, ["Cinnabar Island"] = {1.5, {["abilities"] = {"surf"}}}}
 KantoMap["Route 20_B"] = {["Seafoam 1F_B"] = {1, {["abilities"] = {"surf"}}}}
 KantoMap["Route 21"] = {["Cinnabar Island"] = {1, {["abilities"] = {"surf"}}}, ["Pallet Town"] = {1, {["abilities"] = {"surf"}}}}
 KantoMap["Route 22"] = {["Viridian City"] = {1}, ["Pokemon League Reception Gate"] = {1}}
