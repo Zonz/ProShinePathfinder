@@ -41,6 +41,15 @@ KantoMap["Cerulean City Bike Shop"] = {["Cerulean City_A"] = {1}}
 KantoMap["Cerulean City Subway"] = {["Celadon City Subway"] = {K_SUBWAY}, ["Pokecenter Cerulean"] = {0.2}, ["Lavender Town Subway"] = {K_SUBWAY}, ["Fuchsia City Subway"] = {K_SUBWAY}, ["Saffron City Subway"] = {K_SUBWAY}, ["Pewter City Subway"] = {K_SUBWAY}, ["Vermilion City Subway"] = {K_SUBWAY}, ["Viridian City Subway"] = {K_SUBWAY}}
 KantoMap["Cerulean City_A"] = {["Cerulean City Bike Shop"] = {1}, ["Cerulean Gym"] = {1}, ["Cerulean House 6"] = {1}, ["Cerulean House 5"] = {1}, ["Cerulean House 4"] = {1}, ["Cerulean House 3"] = {1}, ["Cerulean House 2"] = {1}, ["Cerulean House 1"] = {1}, ["Pokecenter Cerulean"] = {1}, ["Route 9"] = {1}, ["Route 5_B"] = {1, {["abilities"] = {"cut"}}}, ["Route 5_A"] = {1, {["abilities"] = {"cut"}}}, ["Route 24_B"] = {1}, ["Cerulean Pokemart"] = {1}, ["Route 4"] = {1}}
 KantoMap["Cerulean City_B"] = {["Route 24_A"] = {1, {["abilities"] = {"surf"}}}, ["Route 4"] = {1, {["abilities"] = {"surf"}}}}
+KantoMap["Cerulean Cave 1F_A"] = {["Cerulean City_B"] = {1}, ["Cerulean Cave 1F_C"] = {1}, ["Cerulean Cave 2F_A"] =  {1}, ["Cerulean Cave 2F_B"] = {1}, ["Cerulean Cave 2F_C"] = {1}, ["Cerulean Cave 2F_D"] = {1}, ["Cerulean Cave 2F_E"] = {1}}
+KantoMap["Cerulean Cave 1F_B"] = {["Cerulean Cave 2F_A"] = {1}, ["Cerulean Cave B1F"] = {1}}
+KantoMap["Cerulean Cave 1F_C"] = {["Cerulean Cave B1F"] = {1}}
+KantoMap["Cerulean Cave 2F_A"] = {["Cerulean Cave 1F_A"] = {1}, ["Cerulean Cave 2F_B"] = {1}}
+KantoMap["Cerulean Cave 2F_B"] = {["Cerulean Cave 1F_A"] = {1}}
+KantoMap["Cerulean Cave 2F_C"] = {["Cerulean Cave 1F_A"] = {1}}
+KantoMap["Cerulean Cave 2F_D"] = {["Cerulean Cave 1F_A"] = {1}}
+KantoMap["Cerulean Cave 2F_E"] = {["Cerulean Cave 1F_A"] = {1}}
+KantoMap["Cerulean Cave B1F"] = {["Cerulean Cave 1F_B"] = {1}, ["Cerulean Cave 1F_C"] = {1}}
 KantoMap["Cerulean Gym"] = {["Cerulean City_A"] = {1}}
 KantoMap["Cerulean House 1"] = {["Cerulean City_A"] = {1}}
 KantoMap["Cerulean House 2"] = {["Cerulean City_A"] = {1}}
@@ -233,7 +242,7 @@ KantoMap["Route 2 House"] = {["Route 2_B"] = {1}}
 KantoMap["Route 2 Stop"] = {["Viridian Forest"] = {0.2}, ["Route 2_C"] = {0.2}}
 KantoMap["Route 2 Stop2"] = {["Route 2_A"] = {0.2}, ["Viridian Forest"] = {0.2}}
 KantoMap["Route 2 Stop3"] = {["Route 2_B"] = {0.2}, ["Route 2_D"] = {0.2}}
-KantoMap["Route 20_A"] = {["Seafoam 1F_A"] = {1, {["abilities"] = {"surf"}}}, ["Cinnabar Island"] = {1.5, {["abilities"] = {"surf"}}}}
+KantoMap["Route 20_A"] = {["Seafoam 1F_A"] = {1, {["abilities"] = {"surf"}}, ["Cinnabar Island"] = {1.5, {["abilities"] = {"surf"}}}}}
 KantoMap["Route 20_B"] = {["Seafoam 1F_B"] = {1, {["abilities"] = {"surf"}}}}
 KantoMap["Route 21"] = {["Cinnabar Island"] = {1, {["abilities"] = {"surf"}}}, ["Pallet Town"] = {1, {["abilities"] = {"surf"}}}}
 KantoMap["Route 22"] = {["Viridian City"] = {1}, ["Pokemon League Reception Gate"] = {1}}
