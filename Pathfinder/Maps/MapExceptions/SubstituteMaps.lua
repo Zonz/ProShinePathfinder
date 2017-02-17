@@ -29,6 +29,18 @@ return {
         ["Cerulean City_A"] = {{0, 17, 58, 50}, {14, 10, 58, 16}, {21, 8, 58, 9}, {38, 0, 58, 8}}, -- Main city
         ["Cerulean City_B"] = {{0, 5, 15, 16}, {14, 3, 20, 9}, {21, 0, 37, 7}} -- Cerulean Cave side
     },
+	["Cerulean Cave 1F"] = {
+		["Cerulean Cave 1F_A"] = {{9, 20, 51, 38}, {13, 17, 58, 19}, {16, 9, 58, 16}, {52, 20, 58, 20}, {56, 21, 58, 36}, {51, 25, 55, 38}}, --entrance
+		["Cerulean Cave 1F_B"] = {{10, 12, 14, 16}, {10, 17, 11, 18}}, --top left, connecting 2F_A with B1F
+		["Cerulean Cave 1F_C"] = {{53, 21, 55, 23}} --middle right from B1F
+	},
+	["Cerulean Cave 2F"] = {
+		["Cerulean Cave 2F_A"] = {{36, 27, 38, 29}, {9, 18, 28, 20}, {24, 24, 35, 39}, {24, 21, 28, 23}, {34, 7, 35, 25}, {8, 7, 27, 14}, {28, 7, 23, 7}, {23, 36, 23, 36}, {8, 38, 29, 40}, {8, 20, 8, 37}, {9, 28, 15, 30}, {20, 14, 27, 14}}, --access from 1F_A and B1F
+		["Cerulean Cave 2F_B"] = {{10, 25, 17, 27}, {17, 28, 17, 28}}, -- Dead End from 1F_A, lower left
+		["Cerulean Cave 2F_C"] = {{16, 15, 27, 17}}, --Dead End from 1F_A, upper left
+		["Cerulean Cave 2F_D"] = {{37, 8, 52, 13}}, --Dead End from 1F_A, upper right
+		["Cerulean Cave 2F_E"] = {{39, 17, 48, 23}, {45, 24, 51, 38}} --Dead End from 1F_A, lower right
+	},
     ["Route 5"] = {
         ["Route 5_A"] = {{16, 0, 25, 21}}, -- DayCare side
         ["Route 5_B"] = {{12, 0, 15, 25}, {16, 23, 31, 36}, {27, 0, 29, 22}} -- outside part
