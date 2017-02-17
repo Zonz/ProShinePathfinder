@@ -13,7 +13,7 @@ local _ss                 = require (cpppdpath .. "Settings/Static_Settings")
 local _globalMap          = require (cppdpath .. "Maps/GlobalMap")
 local subMaps             = require (cppdpath .. "Maps/MapExceptions/SubstituteMaps")
 local linkExceptions      = require (cppdpath .. "Maps/MapExceptions/LinkExceptions")
-local npcExceptions       = require (cppdpath .. "Maps/MapExceptions/NpcExceptions")
+local _npcExceptions      = require (cppdpath .. "Maps/MapExceptions/NpcExceptions")
 local digways             = require (cppdpath .. "Maps/MapExceptions/Digways")
 local dialogSolver        = require (cppdpath .. "Lib/MoveTo/DialogSolver")
 local elevatorExceptions  = require (cppdpath .. "Maps/MapExceptions/Elevators")
@@ -25,6 +25,7 @@ local globalMap           = {}
 local pathSolution        = {}
 local settings            = {}
 local destStore           = ""
+local npcExceptions       = nil
 local outlet              = nil
 local playerNode          = nil
 local from                = nil
@@ -145,7 +146,7 @@ local function getNextNodes()
     local from = playerNode
     while pathSolution[1] and isSameMap(playerNode, pathSolution[1]) do
         local toMap = pathSolution[1]
-        if exceptionExist(linkExceptions, from, toMap) or exceptionExist(npcExceptions, from, toMap) or exceptionExist(digways, from, toMap) then 
+        if exceptionExist(linkExceptions, from, toMap) or exceptionExist(npcExceptions, from, toMap) or exceptionExist(digways, from, toMap) then
             return from, toMap
         end
         from = pathSolution[1]
@@ -319,10 +320,10 @@ local function initSettings(ss)
     ["headbutt"] = ss.HEADBUTT,
     ["discover"] = ss.DISCOVER
     }
-    if settings.workOpts.headbutt and not Game.getPokemonNumberWithMove("Headbutt", 155) then
+    if settings.workOpts.headbutt and not Game.getPokemonNumberWithMove("Headbutt", 151) then
         log("Pathfinder: Warning, cannot Headbutt trees.")
     end
-    if settings.workOpts.dig and not Game.getPokemonNumberWithMove("Dig") then
+    if settings.workOpts.dig and not Game.getPokemonNumberWithMove("Dig", 151) then
         log("Pathfinder: Warning, cannot Dig.")
     end
 end
@@ -419,10 +420,15 @@ local function onPathfinderDialogMessage(message)
     dialogSolver.solveDialog(message, pfData)
 end
 
+local function onPathfinderSystemMessage(message)
+    if stringContains(message, "Your Safari Time is over!") then resetPath() end
+end
+
 -- load map and settings
 local function onPathfinderStart()
     globalMap = assert(_globalMap(), "Pathfinder --> Error : failed to load map")
     local ss = assert(_ss(), "Pathfinder --> Error : failed to load settings")
+    npcExceptions = _npcExceptions()
     initSettings(ss)
 end
 
@@ -433,6 +439,7 @@ end
 
 registerHook("onStart", onPathfinderStart)
 registerHook("onDialogMessage", onPathfinderDialogMessage)
+registerHook("onSystemMessage", onPathfinderSystemMessage)
 registerHook("onStop", onPathfinderStop)
 
 -- return table for users

@@ -51,6 +51,11 @@ end
 
 local function getTargets(opts)
     local npcs = getNpcData()
+    for _, npc in ipairs(npcs) do
+        npc.x = tonumber(npc.x)
+        npc.y = tonumber(npc.y)
+        npc.type = tonumber(npc.type)
+    end
     local tKeep = {npcTypes.abandonnedPkm, npcTypes.pokeStop, npcTypes.test}
     if opts.headbutt and headbuttIndex then
         tKeep[#tKeep + 1] = npcTypes.headbutt
@@ -66,6 +71,7 @@ local function getTargets(opts)
     end
     tKeep = Table.join(tKeep)
     npcs = Array.filter(hasKey(tKeep, "type"))(npcs)
+    npcs = Array.filter(function(npc) return npc.isBattler == "False" end)(npcs)
     return npcs
 end
 
@@ -104,8 +110,8 @@ end
 function work.isWorking(map, opts)
     if map ~= currentMap and opts then
         currentMap = map
-        headbuttIndex = Game.getPokemonNumberWithMove("Headbutt", 155)
-        digIndex = Game.getPokemonNumberWithMove("Dig")
+        headbuttIndex = Game.getPokemonNumberWithMove("Headbutt", 151)
+        digIndex = Game.getPokemonNumberWithMove("Dig", 151)
         targets = getTargets(opts)
     end
     while targets and #targets ~= 0 do

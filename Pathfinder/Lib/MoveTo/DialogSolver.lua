@@ -5,7 +5,7 @@ local cppdpath = nTimes(3, rmlast, cpath) -- callee parent of parent dir path
 
 local Maybe                 = require (cppdpath .. "Lib/Maybe")
 local Lib                   = require (cppdpath .. "Lib/Lib")
-local npcExceptions         = require (cppdpath .. "Maps/MapExceptions/NpcExceptions")
+local _npcExceptions        = require (cppdpath .. "Maps/MapExceptions/NpcExceptions")
 local elevators             = require (cppdpath .. "Maps/MapExceptions/Elevators")
 local digways               = require (cppdpath .. "Maps/MapExceptions/Digways")
 local transmats             = require (cppdpath .. "Maps/MapExceptions/Transmats")
@@ -23,7 +23,7 @@ local subwayDialogAnswers   = {["Viridian City Subway"] = 1, ["Pewter City Subwa
 local function solveNpc(message, n1, n2)
     local npcExce = npcExceptions[n1][n2]
     assert(npcExce[2] and npcExce[3], "PathFinder --> npc dialog exception is missing some data. " .. n1 .. " -> " .. n2)
-    if message == npcExce[3] then
+    if string.upper(message) == string.upper(npcExce[3]) then
         pushDialogAnswer(npcExce[2])
         log("Pathfinder: Pushing dialog: " .. npcExce[2])
     end
@@ -150,5 +150,11 @@ local function solveDialog(message, pf)
         return solveTransmatReached(message, n2)
     end
 end
+
+local function onDialogSolverStart()
+    npcExceptions = _npcExceptions()
+end
+
+registerHook("onStart", onDialogSolverStart)
 
 return { solveDialog = solveDialog }
