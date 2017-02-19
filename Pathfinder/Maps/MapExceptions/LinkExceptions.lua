@@ -248,6 +248,33 @@ linkExce["Diamond Domain 1F_B"] = {
     ["Diamond Domain B1F"] = {37, 39},
     ["Love Island_B"] = {31, 20},
 }
+linkExce["Cerulean Cave 1F_A"] = {
+	["Cerulean Cave 2F_A"] = {37, 29},
+	["Cerulean Cave 2F_B"] = {11, 23},
+	["Cerulean Cave 2F_C"] = {17, 16},
+	["Cerulean Cave 2F_D"] = {53, 12},
+	["Cerulean Cave 2F_E"] = {45, 25},
+}
+linkExce["Cerulean Cave 2F_A"] = {
+	["Cerulean Cave 1F_A"] = {37, 28},
+	["Cerulean Cave 1F_B"] = {11, 9},
+}
+linkExce["Cerulean Cave 2F_B"] = {
+	["Cerulean Cave 1F_A"] = {11, 26},
+}
+linkExce["Cerulean Cave 2F_C"] = {
+	["Cerulean Cave 1F_A"] = {17, 16},
+}
+linkExce["Cerulean Cave 2F_D"] = {
+	["Cerulean Cave 1F_A"] = {51, 9},
+}
+linkExce["Cerulean Cave 2F_E"] = {
+	["Cerulean Cave 1F_A"] = {49, 36},
+}
+linkExce["Cerulean Cave B1F"] = {
+	["Cerulean Cave 1F_B"] = {8, 17},
+	["Cerulean Cave 1F_C"] = {53, 17},
+}
 
 ----------------------
 ------ JOHTO ---------
