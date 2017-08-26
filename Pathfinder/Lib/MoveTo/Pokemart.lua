@@ -34,6 +34,7 @@ end
 -- move to nearest PM and buy
 local function useNearestPokemart(map, item, amount)
 	if not amount then
+		-- useNearestPokemart(item, amount) overload
 		amount = item
 		item = map
 		map = getMapName()
