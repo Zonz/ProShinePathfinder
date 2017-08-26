@@ -33,21 +33,20 @@ end
 
 -- move to nearest PM and buy
 local function useNearestPokemart(map, item, amount)
-    if not amount then
-        -- useNearestPokemart(item, amount) overload
+	if not amount then
 		amount = item
 		item = map
 		map = getMapName()
 	end
-    assert(ItemList[item], "BuyItem: Item does not exist in the list, this is case sensitive.")
-    if not canBuy(ItemList[item].value, amount) then
-        log("Not enough money to buy " .. amount .. " " .. item)
-        return false
-    end
-    if pf.moveTo(map, Table.getKeys(ItemList[item].maps)) then
-        return true
-    end
-    return usePokemart(map, item, amount)
+	assert(ItemList[item], "BuyItem: Item does not exist in the list, this is case sensitive.")
+	if not canBuy(ItemList[item].value, amount) then
+		log("Not enough money to buy " .. amount .. " " .. item)
+		return false
+	end
+	if pf.moveTo(map, Table.getKeys(ItemList[item].maps)) then
+		return true
+	end
+	return usePokemart(map, item, amount)
 end
 
 return { useNearestPokemart = useNearestPokemart }
