@@ -7,8 +7,11 @@ local _ss = require (cpppdpath .. "Settings/Static_Settings")
 
 return function()
 
-local ss = _ss()
-local K_SUBWAY = ss.K_SUBWAY
+local K_SUBWAY = 1
+if getServer() ~= "None" then
+	local ss = _ss()
+	K_SUBWAY = ss.K_SUBWAY
+end
 
 local KantoMap = {}
 
