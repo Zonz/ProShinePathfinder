@@ -11,9 +11,9 @@ local H_TO_KJ = 1
 local J_TO_K  = 1
 
 if getServer() ~= "None" then  
-  local ss = _ss()
-  H_TO_KJ = ss.H_TO_KJ
-  J_TO_K  = ss.J_TO_K
+    local ss = _ss()
+    H_TO_KJ = ss.H_TO_KJ
+    J_TO_K  = ss.J_TO_K
 end
 
 local Link = {}
