@@ -7,8 +7,11 @@ local _ss = require (cpppdpath .. "Settings/Static_Settings")
 
 return function()
 
-local ss = _ss()
-local J_SUBWAY = ss.J_SUBWAY
+local J_SUBWAY = 1
+if getServer() ~= "None" then
+	local ss = _ss()
+	J_SUBWAY = ss.J_SUBWAY
+end
 
 local JohtoMap = {}
 
