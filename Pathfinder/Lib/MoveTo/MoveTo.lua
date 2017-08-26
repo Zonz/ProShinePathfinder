@@ -353,6 +353,10 @@ end
 
 -- main function called by users
 local function moveTo(map, dest)
+    if not dest then
+		dest = map
+		map = getMapName()
+	end
     playerNode = getPlayerNode(map)
     dest = mapsToNodes(dest)
     if Lib.useMount(settings.mount) then
