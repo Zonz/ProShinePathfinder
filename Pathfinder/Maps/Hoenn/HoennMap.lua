@@ -7,8 +7,11 @@ local _ss = require (cpppdpath .. "Settings/Static_Settings")
 
 return function()
 
-local ss = _ss()
-local H_SUBWAY = ss.H_SUBWAY
+local H_SUBWAY = 1
+if getServer() ~= "None" then
+	local ss = _ss()
+	H_SUBWAY = ss.H_SUBWAY
+end
 
 local HoennMap = {}
 
