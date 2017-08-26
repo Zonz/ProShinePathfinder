@@ -353,26 +353,30 @@ end
 
 -- main function called by users
 local function moveTo(map, dest)
-    playerNode = getPlayerNode(map)
-    dest = mapsToNodes(dest)
-    if Lib.useMount(settings.mount) then
-        return true
-    elseif checkOutlet() then
-        return true
-    elseif Work.isWorking(map, settings.workOpts) then
-        return true
-    elseif destStore == table.concat(dest, " | ") then
-        return moveWithCalcPath()
-    else
-        settings.abilitiesIndex = validateAbilitiesIndex(settings.abilitiesIndex, moveAbilities)
-        settings.accountItems = validateItems(settings.accountItems, moveItems)
-        pathSolution = simpleAStar(goal(dest))(playerNode)
-        destStore = table.concat(dest, " | ")
-        if not pathSolution then return findSettings(dest) end
-        log("Path: " .. table.concat(pathSolution,"->"))
-        return moveWithCalcPath()
-    end
-    return false
+	if not dest then
+		dest = map
+		map = getMapName()
+	end
+	playerNode = getPlayerNode(map)
+	dest = mapsToNodes(dest)
+	if Lib.useMount(settings.mount) then
+		return true
+	elseif checkOutlet() then
+		return true
+	elseif Work.isWorking(map, settings.workOpts) then
+		return true
+	elseif destStore == table.concat(dest, " | ") then
+		return moveWithCalcPath()
+	else
+		settings.abilitiesIndex = validateAbilitiesIndex(settings.abilitiesIndex, moveAbilities)
+		settings.accountItems = validateItems(settings.accountItems, moveItems)
+		pathSolution = simpleAStar(goal(dest))(playerNode)
+		destStore = table.concat(dest, " | ")
+		if not pathSolution then return findSettings(dest) end
+		log("Path: " .. table.concat(pathSolution,"->"))
+		return moveWithCalcPath()
+	end
+	return false
 end
 
 local function getPath(start, dest)

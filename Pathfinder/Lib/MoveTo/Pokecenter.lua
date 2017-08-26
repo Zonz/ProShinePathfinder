@@ -10,11 +10,12 @@ local PokecenterList = require (cppdpath .. "Maps/Pokecenters/Pokecenters")
 
 -- move to closest PC
 local function moveToPC(map)
-    return pf.moveTo(map, PokecenterList)
+    return pf.moveTo(map or getMapName(), PokecenterList)
 end
 
 -- move to closest PC and use the nurse
 local function useNearestPokecenter(map)
+    map = map or getMapName()
     if map == "Indigo Plateau Center" then
         return assert(talkToNpcOnCell(4, 22), "Failed to talk to Nurse on Cell 4/22")
     elseif string.find(map, "Seafoam") and getMoney() > 1500 then

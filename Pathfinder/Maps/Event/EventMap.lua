@@ -20,7 +20,7 @@ EventMap["Vermilion City_A"] = {["Vulcan Island shore"] = {0.2}}
 EventMap["Vulcan Island shore"] = {["Lilycove City Harbor"] = {999}, ["Olivine City"] = {999}, ["Vermilion City_A"] = {999}, ["Vulcan Path"] = {1}}
 EventMap["Vulcan Path"] = {["Vulcan Forest"] = {1}, ["Vulcan Island shore"] = {1}}
 EventMap["Vulcan Forest"] = {["Vulcan Path"] = {1}, ["Vulcanic Town"] = {1}}
-EventMap["Vulcanic Town"] = {["Pokecenter Vulcanic Town"] = {1}, ["Vulcan Forest"] = {1}}
+EventMap["Vulcanic Town"] = {["Pokecenter Vulcanic Town"] = {1}, ["Vulcan Forest"] = {1}, ["Kalijodo Path"] = {1}}
 
 
 -- Christmas Event
