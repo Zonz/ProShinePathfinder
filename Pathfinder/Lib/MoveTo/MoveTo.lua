@@ -36,7 +36,9 @@ local digIndex            = nil
 local badMapNames =
 {
 -- ["Parent map"] = {"Link with bad name", "Another link with bad name"}
-["Route 22"] = {"Pokemon League Reception Gate"}
+["Route 22"] = {"Pokemon League Reception Gate"},
+["Route 130"] = {"Route 131"},
+["Pacifidlog Town"] = {"Route 131"},
 }
 
 -----------------------------------
