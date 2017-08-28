@@ -102,6 +102,7 @@ KantoMap["Indigo Plateau Center"] = {["Indigo Plateau"] = {0.2}, ["Player Bedroo
 KantoMap["Indigo Plateau"] = {["Indigo Plateau Center Johto"] = {1}, ["Indigo Plateau Center"] = {1}, ["Victory Road Kanto 3F_B"] = {1}}
 KantoMap["Item Maniac House"] = {["Route 25"] = {1}}
 KantoMap["Jail"] = {["Pewter City"] = {1}}
+KantoMap["Kanto Daycare"] = {["Route 5_A"] = {1}}
 KantoMap["Kanto Safari Zone Area 1 Building 1"] = {["Safari Entrance_A"] = {1}}
 KantoMap["Know It All Mans Room"] = {["Celadon Office Roof Top"] = {1}}
 KantoMap["Lavender Pokemart"] = {["Lavender Town"] = {1}}
@@ -270,7 +271,7 @@ KantoMap["Route 2_D"] = {["Route 2 Stop3"] = {1}, ["Route 2_C"] = {0, {["abiliti
 KantoMap["Route 3"] = {["Pewter City"] = {1}, ["Mt. Moon 1F"] = {1}, ["Pokecenter Route 3"] = {1}, ["Route 4"] = {1, {["abilities"] = {"dig"}}}}
 KantoMap["Route 4"] = {["Route 3"] = {1, {["abilities"] = {"dig"}}}, ["Mt. Moon Exit"] = {1}, ["Cerulean City_B"] = {1, {["abilities"] = {"surf"}}}, ["Cerulean City_A"] = {1}}
 KantoMap["Route 5 Stop House"] = {["Saffron City"] = {0.2, {["items"] = {"Marsh Badge"}}, {["items"] = {"Fresh Water"}}}, ["Route 5_B"] = {0.2}}
-KantoMap["Route 5_A"] = {["Route 5_B"] = {0.2}}
+KantoMap["Route 5_A"] = {["Route 5_B"] = {0.2}, ["Kanto Daycare"] = {1}}
 KantoMap["Route 5_B"] = {["Cerulean City_A"] = {1}, ["Underground House 1"] = {1}, ["Route 5 Stop House"] = {1}}
 KantoMap["Route 6 Stop House"] = {["Saffron City"] = {0.2, {["items"] = {"Marsh Badge"}}, {["items"] = {"Fresh Water"}}}, ["Route 6"] = {0.2}}
 KantoMap["Route 6"] = {["Vermilion City_A"] = {1}, ["Route 6 Stop House"] = {1}, ["Underground House 2"] = {1}}
