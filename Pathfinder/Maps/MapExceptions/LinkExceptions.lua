@@ -1,5 +1,8 @@
 local linkExce = {}
 
+linkExce["Route 22"] = {
+    ["Pokemon League Reception Gate"] = {9, 8},
+}
 linkExce["Route 2 Stop3"] = {
     ["Route 2_B"] = {3, 2}, -- top
     ["Route 2_D"] = {3, 12} -- down
@@ -906,6 +909,12 @@ linkExce["Valley Of Steel_B"] = {
     ["Cave Of Steel 1F_A"] = {30, 59},
     ["Cave Of Steel 1F_B"] = {49, 30},
     ["Cave Of Steel 1F_C"] = {59, 54},
+}
+linkExce["Pacifidlog Town"] = {
+	["Route 131"] = {40, 13},
+}
+linkExce["Route 130_A"] = {
+	["Route 131"] = {0, 34},
 }
 
 ----------------------
