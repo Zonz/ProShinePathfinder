@@ -133,7 +133,7 @@ return {
     },
     ["Victory Road Kanto 3F"] = {
         ["Victory Road Kanto 3F_A"] = {{13, 16, 27, 22}}, -- top left
-        ["Victory Road Kanto 3F_B"] = {{28, 14, 48, 22}, {19, 23, 42, 27}, {23, 28, 36, 28}, {20, 29, 25, 35}, {26, 34, 31, 35}, {31, 36, 35, 38}}, -- middle, main path
+        ["Victory Road Kanto 3F_B"] = {{28, 13, 48, 22}, {19, 23, 42, 27}, {23, 28, 36, 28}, {20, 29, 25, 35}, {26, 34, 31, 35}, {31, 36, 35, 38}}, -- middle, main path
         ["Victory Road Kanto 3F_C"] = {{50, 16, 64, 28}, {43, 23, 49, 35}, {27, 29, 40, 32}, {33, 33, 42, 34}, {37, 35, 40, 38}, {40, 28, 40, 28}}, -- top right path
         ["Victory Road Kanto 3F_D"] = {{55, 31, 64, 39}} -- bottom right
     },
