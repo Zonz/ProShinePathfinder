@@ -32,6 +32,13 @@ local from                = nil
 local toMap               = nil
 local digIndex            = nil
 
+-- Maps that are labeled as "Link" from the parent map
+local badMapNames =
+{
+-- ["Parent map"] = {"Link with bad name", "Another link with bad name"}
+["Route 22"] = {"Pokemon League Reception Gate"}
+}
+
 -----------------------------------
 ----- A* NECESSARY  FUNCTIONS -----
 -----------------------------------
@@ -246,19 +253,22 @@ end
 
 -- try to move with exception, and with the map name if no exception are found.
 local function movingApply(from, toMap)
-    Lib.log1time("Path: Maps Remains: " .. #pathSolution .. "  Moving To: --> " .. toMap)
-    if handleException(from, toMap) then
-        return true
-    else
-        if moveToMap(toMap:gsub("_%u$", "")) then -- remove subMap tag
-            return true
-        else
-            resetPath()
-            Lib.log1time("Pathfinder --> Error in Path: from " .. from .. " to " .. toMap .. " -- Reset and Recalc")
-            swapPokemon(getTeamSize(), getTeamSize() - 1)
-            return true
-        end
-    end
+	Lib.log1time("Path: Maps Remains: " .. #pathSolution .. "  Moving To: --> " .. toMap)
+	if handleException(from, toMap) then
+		return true
+	else
+		if badMapNames[from] and Lib.inTable(badMapNames[from], toMap) then
+			toMap = "Link"
+		end
+		if moveToMap(toMap:gsub("_%u$", "")) then -- remove subMap tag
+			return true
+		else
+			resetPath()
+			Lib.log1time("Pathfinder --> Error in Path: from " .. from .. " to " .. toMap .. " -- Reset and Recalc")
+			swapPokemon(getTeamSize(), getTeamSize() - 1)
+			return true
+		end
+	end
 end
 
 -- remove already crossed nodes then try to move
