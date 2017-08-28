@@ -32,15 +32,6 @@ local from                = nil
 local toMap               = nil
 local digIndex            = nil
 
--- Maps that are labeled as "Link" from the parent map
-local badMapNames =
-{
--- ["Parent map"] = {"Link with bad name", "Another link with bad name"}
-["Route 22"] = {"Pokemon League Reception Gate"},
-["Route 130"] = {"Route 131"},
-["Pacifidlog Town"] = {"Route 131"},
-}
-
 -----------------------------------
 ----- A* NECESSARY  FUNCTIONS -----
 -----------------------------------
@@ -259,9 +250,6 @@ local function movingApply(from, toMap)
 	if handleException(from, toMap) then
 		return true
 	else
-		if badMapNames[from] and Lib.inTable(badMapNames[from], toMap) then
-			toMap = "Link"
-		end
 		if moveToMap(toMap:gsub("_%u$", "")) then -- remove subMap tag
 			return true
 		else
