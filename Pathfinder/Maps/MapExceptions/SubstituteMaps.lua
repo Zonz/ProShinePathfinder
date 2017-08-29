@@ -201,7 +201,7 @@ return {
     },
     ["Route 14"] = {
         ["Route 14_A"] = {{13, 0, 36, 9}, {8, 10, 32, 55}, {0, 46, 7, 55}}, -- main road
-        ["Route 1B_B"] = {{8, 3, 12, 9}}, -- small grass patch
+        ["Route 14_B"] = {{8, 3, 12, 9}}, -- small grass patch
     },
     ["Vermilion City"] = {
         ["Vermilion City_A"] = {{5, 0, 82, 48}, {38, 49, 82, 68}}, -- main city
