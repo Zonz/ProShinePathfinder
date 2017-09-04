@@ -17,7 +17,7 @@ local transmatDialogReached = {"You are detectedly already in the lobby of Pokec
 local transmatDialogPage    = nil
 local useDigway             = {"Do you want to attempt to use it?", "Do you want to attempt to use it? It leads to one of these outlets."}
 local useDive               = {"These look like deeper waters. Do you want to Dive here?", "Do you want to Dive here?", "Do you want to go to the surface?"}
-local subwayDialogCheck     = "Where would you like to go? Takes only $2500."
+local subwayDialogCheck     = "Where would you like to go? Takes only $2500"
 local subwayDialogAnswers   = {["Viridian City Subway"] = 1, ["Pewter City Subway"] = 2, ["Cerulean City Subway"] = 3, ["Vermilion City Subway"] = 4, ["Lavender Town Subway"] = 5, ["Celadon City Subway"] = 6, ["Fuchsia City Subway"] = 7, ["Saffron City Subway"] = 8, ["Azalea Town Subway"] = 1, ["Blackthorn City Subway"] = 2, ["Cherrygrove City Subway"] = 3, ["Ecruteak City Subway"] = 4, ["Goldenrod City Subway"] = 5, ["Mahogany Town Subway"] = 6, ["Olivine City Subway"] = 7, ["Violet City Subway"] = 8}
 
 local function solveNpc(message, n1, n2)
@@ -80,18 +80,19 @@ end
 
 -- answer is the destination node, we make sure the option is available, if not we ask more options.
 local function solveSubway(message, n1, n2)
-    local pushLog = "Pathfinder: Pushing dialog: "
-    local subwayAnswerOffered = 4
-    local answer = subwayDialogAnswers[n2]
-    if answer > subwayDialogAnswers[n1] then
-        answer = answer - 1
-    end
-    if answer > subwayAnswerOffered then
-        pushDialogAnswer("More Options")
-        pushLog = pushLog .. "More Options, "
-    end
-    pushDialogAnswer(n2)
-    Lib.log1time(pushLog .. n2 .. ".")
+	local pushLog = "Pathfinder: Pushing dialog: "
+	local subwayAnswerOffered = 4
+	local answer = subwayDialogAnswers[n2]
+	if answer > subwayDialogAnswers[n1] then
+		answer = answer - 1
+	end
+	while answer > subwayAnswerOffered do
+		answer = answer - subwayAnswerOffered
+		pushDialogAnswer("More Options")
+		pushLog = pushLog .. "More Options -> "
+	end
+	pushDialogAnswer(n2)
+	Lib.log1time(pushLog .. n2 .. ".")
 end
 
 local function solveTransmat(n2)
@@ -142,7 +143,7 @@ local function solveDialog(message, pf)
         return
     elseif pf.exceptionExist(elevators, n1, n2) then
         return solveElevator(message, n1, n2)
-    elseif message == subwayDialogCheck and pf.isSubwayPath(n1, n2) then
+    elseif message:contains(subwayDialogCheck) and pf.isSubwayPath(n1, n2) then
         return solveSubway(message, n1, n2)
     elseif message == useTransmat then
         return solveTransmat(n2)
