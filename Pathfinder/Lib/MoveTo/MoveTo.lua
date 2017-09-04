@@ -244,20 +244,27 @@ local function resetPath()
     destStore = ""
 end
 
+local function errorInPath(from, toMap)
+	resetPath()
+	Lib.log1time("Pathfinder --> Error in Path: from " .. from .. " to " .. toMap .. " -- Reset and Recalc")
+	swapPokemon(getTeamSize(), getTeamSize() - 1)
+end
+
 -- try to move with exception, and with the map name if no exception are found.
 local function movingApply(from, toMap)
+	if not isSameMap(from, getMapName()) then
+		-- Unexpectedly changed maps, could be due to black-out or moveToGrass/Water/NormalGround putting us on a link
+		errorInPath(from, toMap)
+		return true
+	end
 	Lib.log1time("Path: Maps Remains: " .. #pathSolution .. "  Moving To: --> " .. toMap)
 	if handleException(from, toMap) then
 		return true
 	else
-		if moveToMap(toMap:gsub("_%u$", "")) then -- remove subMap tag
-			return true
-		else
-			resetPath()
-			Lib.log1time("Pathfinder --> Error in Path: from " .. from .. " to " .. toMap .. " -- Reset and Recalc")
-			swapPokemon(getTeamSize(), getTeamSize() - 1)
-			return true
+		if not moveToMap(toMap:gsub("_%u$", "")) then -- remove subMap tag
+			errorInPath(from, toMap)
 		end
+		return true
 	end
 end
 
