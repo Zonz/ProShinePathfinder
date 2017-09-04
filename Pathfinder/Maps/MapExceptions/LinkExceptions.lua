@@ -1,5 +1,8 @@
 local linkExce = {}
 
+linkExce["Route 11"] = {
+    ["Route 11 Stop House"] = {83, 18},
+}
 linkExce["Route 22"] = {
     ["Pokemon League Reception Gate"] = {9, 8},
 }
