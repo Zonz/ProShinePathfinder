@@ -18,7 +18,7 @@ local transmatDialogPage    = nil
 local useDigway             = {"Do you want to attempt to use it?", "Do you want to attempt to use it? It leads to one of these outlets."}
 local useDive               = {"These look like deeper waters. Do you want to Dive here?", "Do you want to Dive here?", "Do you want to go to the surface?"}
 local subwayDialogCheck     = "Where would you like to go? Takes only $2500"
-local subwayDialogAnswers   = {["Viridian City Subway"] = 1, ["Pewter City Subway"] = 2, ["Cerulean City Subway"] = 3, ["Vermilion City Subway"] = 4, ["Lavender Town Subway"] = 5, ["Celadon City Subway"] = 6, ["Fuchsia City Subway"] = 7, ["Saffron City Subway"] = 8, ["Azalea Town Subway"] = 1, ["Blackthorn City Subway"] = 2, ["Cherrygrove City Subway"] = 3, ["Ecruteak City Subway"] = 4, ["Goldenrod City Subway"] = 5, ["Mahogany Town Subway"] = 6, ["Olivine City Subway"] = 7, ["Violet City Subway"] = 8}
+local subwayDialogAnswers   = {["Viridian City Subway"] = 1, ["Pewter City Subway"] = 2, ["Cerulean City Subway"] = 3, ["Lavender Town Subway"] = 4, ["Vermilion City Subway"] = 5, ["Celadon City Subway"] = 6, ["Fuchsia City Subway"] = 7, ["Saffron City Subway"] = 8, ["Azalea Town Subway"] = 1, ["Blackthorn City Subway"] = 2, ["Cherrygrove City Subway"] = 3, ["Ecruteak City Subway"] = 4, ["Goldenrod City Subway"] = 5, ["Mahogany Town Subway"] = 6, ["Olivine City Subway"] = 7, ["Violet City Subway"] = 8}
 
 local function solveNpc(message, n1, n2)
     local npcExce = npcExceptions[n1][n2]
