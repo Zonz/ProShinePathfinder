@@ -1,5 +1,17 @@
 local linkExce = {}
 
+linkExce["Route 5 Stop House"] = {
+    ["Saffron City"] = {3, 12},
+}
+linkExce["Route 6 Stop House"] = {
+    ["Saffron City"] = {3, 2},
+}
+linkExce["Route 7 Stop House"] = {
+    ["Saffron City"] = {10, 7},
+}
+linkExce["Route 8 Stop House"] = {
+    ["Saffron City"] = {0, 6},
+}
 linkExce["Route 11"] = {
     ["Route 11 Stop House"] = {83, 18},
 }
