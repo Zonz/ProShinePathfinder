@@ -45,8 +45,8 @@ HoennMap["Cave of Origin B2F"] = {["Cave of Origin B3F"] = {1}, ["Cave of Origin
 HoennMap["Cave of Origin B3F"] = {["Marine Cave Entrance"] = {1}, ["Terra Cave Entrance"] = {1}, ["Cave of Origin B2F"] = {1}}
 HoennMap["Cave of Origin Entrance"] = {["Cave of Origin 1F"] = {1}, ["Sootopolis City"] = {1}}
 HoennMap["Cutter House"] = {["Rustboro City_A"] = {1}}
-HoennMap["Cycle Road Stop House 1"] = {["Route 110_B"] = {0.2}, ["Route 110_D"] = {0.2, {["items"] = {"Bicycle"}}}}
-HoennMap["Cycle Road Stop House 2"] = {["Route 110_A"] = {0.2}, ["Route 110_D"] = {0.2, {["items"] = {"Bicycle"}}}}
+HoennMap["Cycle Road Stop House 1"] = {["Route 110_B"] = {0.2}, ["Route 110_D"] = {0.2, {["items"] = {"Bicycle"}}, {["items"] = {"Green Bicycle"}}, {["items"] = {"Yellow Bicycle"}}, {["items"] = {"Blue Bicycle"}}}}
+HoennMap["Cycle Road Stop House 2"] = {["Route 110_A"] = {0.2}, ["Route 110_D"] = {0.2, {["items"] = {"Bicycle"}}, {["items"] = {"Green Bicycle"}}, {["items"] = {"Yellow Bicycle"}}, {["items"] = {"Blue Bicycle"}}}}
 HoennMap["Desert Ruins_A"] = {["Route 111 Desert"] = {1}, ["Desert Ruins_B"] = {1}}
 HoennMap["Desert Ruins_B"] = {["Desert Ruins_A"] = {1}}
 HoennMap["Desert Underpass Entrance"] = {["Fossil Maniac House"] = {1}}
