@@ -20,7 +20,7 @@ local elevatorExceptions  = require (cppdpath .. "Maps/MapExceptions/Elevators")
 local transmatExceptions  = require (cppdpath .. "Maps/MapExceptions/Transmats")
 local moveAbilities       = {["cut"] = 0, ["surf"] = 0, ["dig"] = 155, ["rock smash"] = 0, ["dive"] = 155}
 local workAbilities       = {["headbutt"] = 155, ["dig"] = 0}
-local moveItems           = {"Fresh Water", "Marsh Badge", "Zephyr Badge", "Bicycle", "Go-Goggles"}
+local moveItems           = {"Fresh Water", "Marsh Badge", "Zephyr Badge", "Bicycle", "Go-Goggles", "Green Bicycle", "Blue Bicycle", "Yellow Bicycle"}
 local globalMap           = {}
 local pathSolution        = {}
 local settings            = {}
