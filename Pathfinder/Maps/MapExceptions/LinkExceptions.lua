@@ -56,6 +56,9 @@ linkExce["Route 9"] = {
     ["Route 10_A"] = {85, 33}, -- pokecenter
     ["Route 10_B"] = {91, 33} -- power plant
 }
+linkExce["Route 10_A"] = {
+    ["Rock Tunnel 1_A"] = {11, 5}
+}
 linkExce["Rock Tunnel 1_B"] = {
     ["Rock Tunnel 2_A"] = {7, 7}, -- top left
     ["Rock Tunnel 2_B"] = {8, 15} -- middle left
