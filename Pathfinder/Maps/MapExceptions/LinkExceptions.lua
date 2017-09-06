@@ -14,6 +14,9 @@ linkExce["Tohjo Falls"] = {
     ["Route 27_A"] = {23, 32}, -- left
     ["Route 27_B"] = {46, 32} -- right
 }
+linkExce["Pewter City"] = {
+    ["Route 3"] = {65, 33}
+}
 linkExce["Mt. Moon B2F_A"] = {
     ["Mt. Moon B1F_B"] = {17, 27}, -- left, towards route 4
     ["Mt. Moon B1F_D"] = {38, 40} -- right, towards route 3
@@ -29,7 +32,8 @@ linkExce["Route 4"] = {
 }
 linkExce["Cerulean City_A"] = {
     ["Route 5_A"] = {17, 50}, -- daycare
-    ["Route 5_B"] = {22, 50} -- fastest path
+    ["Route 5_B"] = {22, 50}, -- fastest path
+    ["Route 9"] = {58, 29}
 }
 linkExce["Route 25"] = {
     ["Route 24_A"] = {9, 30}, -- water side to cerulean cave
