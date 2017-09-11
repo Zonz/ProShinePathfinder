@@ -1,5 +1,8 @@
 local linkExce = {}
 
+linkExce["Celadon City_A"] = {
+    ["Route 16_B"] = {0, 41},
+}
 linkExce["Route 5 Stop House"] = {
     ["Saffron City"] = {3, 12},
 }
