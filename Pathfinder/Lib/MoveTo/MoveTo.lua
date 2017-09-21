@@ -172,21 +172,22 @@ local function handleException(n1, n2)
     end
 end
 
--- return the node coresponding to the current player pos.
+-- return the node coresponding to the current player pos. Also used to return the current map, with submap tag if applicable
 local function getPlayerNode(map)
-    local playerInRectangle = Lib.inRectangle(getPlayerX(), getPlayerY())
-    if subMaps[map] then
-        for subMap, locs in pairs(subMaps[map]) do
-            for _, rect in ipairs(locs) do
-                if playerInRectangle(table.unpack(rect)) then
-                    return subMap
-                end
-            end
-        end
-    error("Pathfinder --> sub map could not be defined, map: " .. map .. "  x: " .. getPlayerX() .. "  y: " .. getPlayerY())
-    end
-    assert(globalMap[map], "Pathfinder -> Starting location does not exist in the map: " .. tostring(map))
-    return map
+	map = map or getMapName()
+	local playerInRectangle = Lib.inRectangle(getPlayerX(), getPlayerY())
+	if subMaps[map] then
+		for subMap, locs in pairs(subMaps[map]) do
+			for _, rect in ipairs(locs) do
+				if playerInRectangle(table.unpack(rect)) then
+					return subMap
+				end
+			end
+		end
+		error("Pathfinder --> sub map could not be defined, map: " .. map .. "  x: " .. getPlayerX() .. "  y: " .. getPlayerY())
+	end
+	assert(globalMap[map], "Pathfinder -> Location does not exist in the map: " .. tostring(map))
+	return map
 end
 
 -- create a new list replacing maps by all nodes corresponding to them
@@ -455,9 +456,10 @@ registerHook("onStop", onPathfinderStop)
 
 -- return table for users
 return {
-    moveTo = moveTo,
-    getPath = getPath,
-    enableDigPath = enableDigPath,
-    disableDigPath = disableDigPath,
-    isDigPathEnabled = isDigPathEnabled,
+	moveTo = moveTo,
+	getPath = getPath,
+	enableDigPath = enableDigPath,
+	disableDigPath = disableDigPath,
+	isDigPathEnabled = isDigPathEnabled,
+	mapName = getPlayerNode,
 }
