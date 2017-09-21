@@ -1,7 +1,7 @@
 local cdpath = ""
 local cpath = select(1, ...) -- callee path
 if cpath ~= nil then
-    cdpath = cpath:match(".+[/%.]") or cdpath -- callee dir path
+	cdpath = cpath:match(".+[/%.]") or cdpath -- callee dir path
 end
 
 local PathFinder    = require (cdpath .. "Lib/MoveTo/MoveTo")
@@ -13,15 +13,16 @@ local PokemonEV     = require (cdpath .. "Lib/Pokemon/PokemonEV")
 local MapSpawn      = require (cdpath .. "Lib/Pokemon/MapSpawn")
 
 return {
-    getPath = PathFinder.getPath,
-    moveTo = PathFinder.moveTo,
-    moveToMapCell = moveToMapCell.moveToMapCell,
-    useNearestPokemart = Pokemart.useNearestPokemart,
-    moveToPC = Pokecenter.moveToPC,
-    useNearestPokecenter = Pokecenter.useNearestPokecenter,
-    isDigPathEnabled = PathFinder.isDigPathEnabled,
-    enableDigPath = PathFinder.enableDigPath,
-    disableDigPath = PathFinder.disableDigPath,
-    getPokemonEV = PokemonEV.getPokemonEV,
-    getMapSpawn = MapSpawn.getMapSpawn,
+	getPath = PathFinder.getPath,
+	moveTo = PathFinder.moveTo,
+	moveToMapCell = moveToMapCell.moveToMapCell,
+	useNearestPokemart = Pokemart.useNearestPokemart,
+	moveToPC = Pokecenter.moveToPC,
+	useNearestPokecenter = Pokecenter.useNearestPokecenter,
+	isDigPathEnabled = PathFinder.isDigPathEnabled,
+	enableDigPath = PathFinder.enableDigPath,
+	disableDigPath = PathFinder.disableDigPath,
+	getPokemonEV = PokemonEV.getPokemonEV,
+	getMapSpawn = MapSpawn.getMapSpawn,
+	mapName = PathFinder.mapName,
 }
