@@ -59,6 +59,9 @@ local Pokecenters = {
     -- Event
     "Pokecenter Vulcanic Town",
 	"Pokecenter Cryofrost Town",
+	-- Sinnoh
+	"Pokecenter Jubilife City",
+	"Pokecenter Sandgem Town",
 }
 
 return Pokecenters
