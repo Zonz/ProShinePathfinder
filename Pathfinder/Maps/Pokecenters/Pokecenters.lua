@@ -62,6 +62,9 @@ local Pokecenters = {
 	-- Sinnoh
 	"Pokecenter Jubilife City",
 	"Pokecenter Sandgem Town",
+	"Pokecenter Oreburgh City",
+	"Pokecenter Floaroma",
+	"Pokecenter Eterna City",
 }
 
 return Pokecenters
