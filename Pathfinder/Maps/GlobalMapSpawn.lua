@@ -7,6 +7,7 @@ local Lib = require (cpdpath .. "Lib/Lib")
 local KantoMapSpawn = require (cdpath .. "Kanto/KantoMapSpawn")
 local JohtoMapSpawn = require (cdpath .. "Johto/JohtoMapSpawn")
 local HoennMapSpawn = require (cdpath .. "Hoenn/HoennMapSpawn")
+local SinnohMapSpawn = require (cdpath .. "Sinnoh/SinnohMapSpawn")
 local EventMapSpawn = require (cdpath .. "Event/EventMapSpawn")
 
 local GlobalMapSpawn = {}
@@ -24,6 +25,7 @@ end
 mergeMap(GlobalMapSpawn, KantoMapSpawn)
 mergeMap(GlobalMapSpawn, JohtoMapSpawn)
 mergeMap(GlobalMapSpawn, HoennMapSpawn)
+mergeMap(GlobalMapSpawn, SinnohMapSpawn)
 mergeMap(GlobalMapSpawn, EventMapSpawn)
 
 return GlobalMapSpawn
