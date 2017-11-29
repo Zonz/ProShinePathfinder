@@ -1035,7 +1035,18 @@ linkExce["Frozen Cave B1F"] = {
     ["Frozen Cave B2F_B"] = {54, 24},
     ["Frozen Cave B2F_C"] = {28, 24},
 }
+--------------------
+--------SINNOH------
+--------------------
 
+linkExce["Route 204"] = {
+    ["Ravaged Path_A"] = {10, 34},
+    ["Ravaged Path_B"] = {19, 26},
+}
+linkExce["Ravaged Path"] = {
+    ["Route 204_A"] = {21, 46},
+    ["Route 204_B"] = {30, 41},
+}
 -- linkExce[""] = {
 --     [""] = {},
 -- }
