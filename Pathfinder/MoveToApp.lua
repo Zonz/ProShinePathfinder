@@ -11,6 +11,7 @@ local Pokecenter    = require (cdpath .. "Lib/MoveTo/Pokecenter")
 local Pokemart      = require (cdpath .. "Lib/MoveTo/Pokemart")
 local PokemonEV     = require (cdpath .. "Lib/Pokemon/PokemonEV")
 local MapSpawn      = require (cdpath .. "Lib/Pokemon/MapSpawn")
+local MapPath       = require (cdpath .. "Lib/MoveTo/MapPath")
 
 return {
 	getPath = PathFinder.getPath,
@@ -25,4 +26,8 @@ return {
 	getPokemonEV = PokemonEV.getPokemonEV,
 	getMapSpawn = MapSpawn.getMapSpawn,
 	mapName = PathFinder.mapName,
+	getPathInMap = MapPath.getPath,
+	cellIsAccessible = MapPath.cellIsAccessible,
+	cellIsShoreline = MapPath.cellIsShoreline,
+	moveToShoreline = MapPath.moveToShoreline,
 }
