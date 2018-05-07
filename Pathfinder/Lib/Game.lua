@@ -17,4 +17,22 @@ function Game.getPokemonNumberWithMove(move, joy) -- optional parameter happines
     return nil
 end
 
+function Game.getNpcOnCell(x, y)
+	for _, npc in pairs(getNpcData()) do
+		if tonumber(npc.x) == x and tonumber(npc.y) == y then
+			return npc
+		end
+	end
+	return nil
+end
+
+function Game.getNpcByName(name)
+	for _, npc in pairs(getNpcData()) do
+		if npc.name == name then
+			return npc
+		end
+	end
+	return nil
+end
+
 return Game
