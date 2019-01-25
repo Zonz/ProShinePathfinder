@@ -12,6 +12,7 @@ local Work                = require (cppdpath .. "Lib/Work")
 local _ss                 = require (cpppdpath .. "Settings/Static_Settings")
 local _globalMap          = require (cppdpath .. "Maps/GlobalMap")
 local subMaps             = require (cppdpath .. "Maps/MapExceptions/SubstituteMaps")
+local mapLinks            = require (cppdpath .. "Maps/MapLink")
 local linkExceptions      = require (cppdpath .. "Maps/MapExceptions/LinkExceptions")
 local _npcExceptions      = require (cppdpath .. "Maps/MapExceptions/NpcExceptions")
 local digways             = require (cppdpath .. "Maps/MapExceptions/Digways")
@@ -146,7 +147,7 @@ local function getNextNodes()
     local from = playerNode
     while pathSolution[1] and isSameMap(playerNode, pathSolution[1]) do
         local toMap = pathSolution[1]
-        if exceptionExist(linkExceptions, from, toMap) or exceptionExist(npcExceptions, from, toMap) or exceptionExist(digways, from, toMap) then
+        if exceptionExist(npcExceptions, from, toMap) or exceptionExist(digways, from, toMap) then
             return from, toMap
         end
         from = pathSolution[1]
@@ -157,9 +158,7 @@ end
 
 -- check for exceptions from n1 to n2, and solve it
 local function handleException(n1, n2)
-    if exceptionExist(linkExceptions , n1, n2) then
-        return assert(moveToCell(table.unpack(linkExceptions[n1][n2])), "Pathfinder --> Error: Exception invalid for: " .. n1 .. " -> " .. n2)
-    elseif exceptionExist(npcExceptions, n1, n2) then
+	if exceptionExist(npcExceptions, n1, n2) then
         return assert(talkToNpcOnCell(table.unpack(npcExceptions[n1][n2][1])), "Pathfinder --> Error: Exception invalid for: " .. n1 .. " -> " .. n2)
     elseif exceptionExist(elevatorExceptions, n1, n2) then
         return solveElevatorExce(n1, n2)
@@ -261,12 +260,16 @@ local function movingApply(from, toMap)
 	Lib.log1time("Path: Maps Remains: " .. #pathSolution .. "  Moving To: --> " .. toMap)
 	if handleException(from, toMap) then
 		return true
-	else
-		if not moveToMap(toMap:gsub("_%u$", "")) then -- remove subMap tag
-			errorInPath(from, toMap)
+	elseif mapLinks[from][toMap] then
+		mapLink = mapLinks[from][toMap]
+		link = math.random(#mapLink)
+		if #mapLink[link] == 2 then
+			moveToCell(mapLink[link][1], mapLink[link][2])
+		else
+			moveToRectangle(mapLink[link][1], mapLink[link][2], mapLink[link][3], mapLink[link][4])
 		end
-		return true
 	end
+	return true
 end
 
 -- remove already crossed nodes then try to move
