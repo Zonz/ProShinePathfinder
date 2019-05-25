@@ -18,7 +18,7 @@
 -----------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------
 
-
+mapLink["Ballroom SS Anne"] = {["SSAnne 3F"] = {{22, 12}}}
 mapLink["Berry Tower Reception Kanto"] = {["Route 13_A"] = {{10, 20, 11, 20}}}
 mapLink["Bike Road House 1f"] = {["Route 16 Stop House"] = {{11, 9}}}
 mapLink["Bike Road Stop 1f"] = {["Bike Road Stop"] = {{9, 9}}}
@@ -27,14 +27,14 @@ mapLink["Bills House"] = {["Route 25"] = {{9, 13, 10, 13}}}
 mapLink["Celadon City_A"] = {["Celadon Gamecorner Stairs"] = {{39, 30}}, ["Celadon Gamecorner Prize Center"] = {{44, 30}}, ["Celadon House"] = {{43, 43}}, ["Celadon Office 1F"] = {{43, 19}}, ["Route 16_B"] = {{0, 41, 0, 43}}, ["Celadon Mart 1"] = {{24, 20}}, ["Pokecenter Celadon"] = {{52, 19}}, ["Route 7"] = {{71, 23, 71, 25}}}
 mapLink["Celadon City_B"] = {["CeladonGym"] = {{21, 50}}}
 mapLink["Celadon Gamecorner Prize Center"] = {["Celadon City_A"] = {{3, 7}}}
-mapLink["Celadon Gamecorner Stairs"] = {["Celadon City_A"] = {{7, 15}}}
+mapLink["Celadon Gamecorner Stairs"] = {["Celadon City_A"] = {{7, 15}}, ["Rocket Hideout B1F_A"] = {{14, 3}}}
 mapLink["Celadon House"] = {["Celadon City_A"] = {{6, 10, 7, 10}}}
 mapLink["Celadon Mart 1"] = {["Celadon Mart 2"] = {{1, 4}}, ["Celadon City_A"] = {{8, 15, 9, 15}}, ["Celadon Mart Elevator"] = {{9, 2}}}
 mapLink["Celadon Mart 2"] = {["Celadon Mart 1"] = {{1, 4}}, ["Celadon Mart Elevator"] = {{9, 2}}, ["Celadon Mart 3"] = {{16, 4}}}
 mapLink["Celadon Mart 3"] = {["Celadon Mart 2"] = {{1, 4}}, ["Celadon Mart 4"] = {{16, 4}}, ["Celadon Mart Elevator"] = {{9, 2}}}
 mapLink["Celadon Mart 4"] = {["Celadon Mart 5"] = {{16, 4}}, ["Celadon Mart Elevator"] = {{9, 2}}, ["Celadon Mart 3"] = {{1, 4}}}
 mapLink["Celadon Mart 5"] = {["Celadon Mart Elevator"] = {{9, 2}}, ["Celadon Mart 4"] = {{1, 4}}, ["Celadon Mart 6"] = {{16, 4}}}
-mapLink["Celadon Mart 6"] = {["Celadon Mart 5"] = {{18, 12}}}
+mapLink["Celadon Mart 6"] = {["Celadon Mart 5"] = {{15, 8}}}
 --mapLink["Celadon Mart Elevator"] = {["Celadon Mart 2"] = {0.2}, ["Celadon Mart 1"] = {0.2}, ["Celadon Mart 4"] = {0.2}, ["Celadon Mart 3"] = {0.2}, ["Celadon Mart 5"] = {0.2}}
 mapLink["Celadon Office 1F"] = {["Celadon City_A"] = {{7, 15}}, ["Celadon Office 2F"] = {{14, 11}}, ["Celadon Office Elevator 1"] = {{4, 2}}}
 mapLink["Celadon Office 2F"] = {["Celadon Office 1F"] = {{18, 11}}, ["Celadon Office Elevator 1"] = {{3, 2}}, ["Celadon Office Elevator 2"] = {{8, 2}}}
@@ -221,6 +221,12 @@ mapLink["Rock Tunnel 1_B"] = {["Rock Tunnel 2_B"] = {{8, 15}}, ["Rock Tunnel 2_A
 mapLink["Rock Tunnel 1_C"] = {["Route 10_C"] = {{21, 32}}, ["Rock Tunnel 2_B"] = {{7, 30}}}
 mapLink["Rock Tunnel 2_A"] = {["Rock Tunnel 1_B"] = {{7, 5}}, ["Rock Tunnel 1_A"] = {{36, 16}}}
 mapLink["Rock Tunnel 2_B"] = {["Rock Tunnel 1_C"] = {{8, 26}}, ["Rock Tunnel 1_B"] = {{10, 13}}}
+mapLink["Rocket Hideout B1F_A"] = {["Rocket Hideout Elevator"] = {{22, 29}}, ["Celadon Gamecorner Stairs"] = {{9, 4}}, ["Rocket Hideout B2F"] = {{16, 4}}}
+mapLink["Rocket Hideout B1F_B"] = {["Rocket Hideout B2F"] = {{13, 38}}}
+mapLink["Rocket Hideout B2F"] = {["Rocket Hideout Elevator"] = {{31, 19}}, ["Rocket Hideout B1F_B"] = {{26, 16}}, ["Rocket Hideout B3F"] = {{23, 4}}, ["Rocket Hideout B1F_A"] = {{31, 4}}}
+mapLink["Rocket Hideout B3F"] = {["Rocket Hideout B4F_B"] = {{14, 22}}, ["Rocket Hideout B2F"] = {{19, 4}}}
+mapLink["Rocket Hideout B4F_A"] = {["Rocket Hideout Elevator"] = {{20, 25}}}
+mapLink["Rocket Hideout B4F_B"] = {["Rocket Hideout B3F"] = {{11, 16}}}
 mapLink["Route 1 Stop House"] = {["Viridian City"] = {{3, 2, 4, 2}}, ["Route 1"] = {{3, 12, 4, 12}}}
 mapLink["Route 1"] = {["Pallet Town"] = {{13, 50, 17, 50}}, ["Route 1 Stop House"] = {{13, 4, 14, 4}}}
 mapLink["Route 10_A"] = {["Route 9"] = {{21, 0, 24, 0}}, ["Rock Tunnel 1_A"] = {{11, 5}}, ["Pokecenter Route 10"] = {{18, 4}}}
@@ -331,20 +337,45 @@ mapLink["Seafoam B4F_B"] = {["Seafoam B3F_E"] = {{46, 6}}}
 mapLink["Seafoam B4F_C"] = {["Seafoam B3F_D"] = {{38, 16}}, ["Seafoam B3F_E"] = {{19, 23}}}
 mapLink["Seafoam B4F_D"] = {["Seafoam B3F_E"] = {{53, 28}}}
 mapLink["SecretHouse"] = {["Safari Area 3"] = {{6, 15, 7, 15}}}
-mapLink["Silph Co 10F"] = {["Silph Co 4F"] = {1}, ["Silph Co 9F"] = {1}, ["Silph Co 11F_A"] = {1}, ["Silph Co Elevator"] = {1}}
-mapLink["Silph Co 11F_A"] = {["Silph Co 10F"] = {1}, ["Silph Co Elevator"] = {1}}
-mapLink["Silph Co 11F_B"] = {["Silph Co 7F_B"] = {1}}
+mapLink["Silph Co 10F"] = {["Silph Co 4F"] = {{15, 12}, {11, 18}, {15, 21}}, ["Silph Co 9F"] = {{6, 4}}, ["Silph Co 11F_A"] = {{10, 3}}, ["Silph Co Elevator"] = {{14, 5}}}
+mapLink["Silph Co 11F_A"] = {["Silph Co 10F"] = {{7, 4}}, ["Silph Co Elevator"] = {{13, 5}}}
+mapLink["Silph Co 11F_B"] = {["Silph Co 7F_B"] = {{3, 7}}}
 mapLink["Silph Co 1F"] = {["Silph Co Elevator"] = {{19, 6}}, ["Silph Co 2F"] = {{30, 3}}, ["Saffron City"] = {{10, 28, 11, 28}}}
-mapLink["Silph Co 2F"] = {["Silph Co 6F"] = {1}, ["Silph Co 8F"] = {1},  ["Silph Co 1F"] = {1}, ["Silph Co 3F"] = {1}, ["Silph Co Elevator"] = {1}}
-mapLink["Silph Co 3F"] = {["Silph Co 9F"] = {1}, ["Silph Co 7F_B"] = {1}, ["Silph Co 5F"] = {1}, ["Silph Co 2F"] = {1}, ["Silph Co 4F"] = {1}, ["Silph Co Elevator"] = {1}}
-mapLink["Silph Co 4F"] = {["Silph Co 6F"] = {1}, ["Silph Co 10F"] = {1}, ["Silph Co 3F"] = {1}, ["Silph Co 5F"] = {1}, ["Silph Co Elevator"] = {1}}
-mapLink["Silph Co 5F"] = {["Silph Co 9F"] = {1}, ["Silph Co 3F"] = {1}, ["Silph Co 7F_A"] = {1}, ["Silph Co 4F"] = {1}, ["Silph Co 6F"] = {1}, ["Silph Co Elevator"] = {1}}
-mapLink["Silph Co 6F"] = {["Silph Co 2F"] = {1}, ["Silph Co 4F"] = {1}, ["Silph Co 5F"] = {1}, ["Silph Co 7F_A"] = {1}, ["Silph Co Elevator"] = {1}}
-mapLink["Silph Co 7F_A"] = {["Silph Co 5F"] = {1}, ["Silph Co 6F"] = {1}, ["Silph Co 8F"] = {1}, ["Silph Co Elevator"] = {1}}
-mapLink["Silph Co 7F_B"] = {["Silph Co 11F_B"] = {1}, ["Silph Co 3F"] = {1}, }
-mapLink["Silph Co 8F"] = {["Silph Co 2F"] = {1}, ["Silph Co 7F_A"] = {1}, ["Silph Co 9F"] = {1}, ["Silph Co Elevator"] = {1}}
-mapLink["Silph Co 9F"] = {["Silph Co 5F"] = {1}, ["Silph Co 3F"] = {1}, ["Silph Co 8F"] = {1}, ["Silph Co 10F"] = {1}, ["Silph Co Elevator"] = {1}}
---mapLink["Silph Co Elevator"] = {["Silph Co 1F"] = {1}}
+mapLink["Silph Co 2F"] = {["Silph Co 6F"] = {{8, 23}}, ["Silph Co 8F"] = {{17, 8}, {35, 23}},  ["Silph Co 1F"] = {{30, 4}}, ["Silph Co 3F"] = {{34, 3}, {3, 8}}, ["Silph Co Elevator"] = {{25, 5}}}
+mapLink["Silph Co 3F"] = {["Silph Co 9F"] = {{2, 18}}, ["Silph Co 7F_B"] = {{16, 18}}, ["Silph Co 5F"] = {{5, 9}, {4, 25}}, ["Silph Co 2F"] = {{29, 5}, {35, 8}}, ["Silph Co 4F"] = {{33, 4}}, ["Silph Co Elevator"] = {{24, 6}}}
+mapLink["Silph Co 4F"] = {["Silph Co 6F"] = {{20, 8}}, ["Silph Co 10F"] = {{3, 24}, {20, 17}, {13, 11}}, ["Silph Co 3F"] = {{28, 4}}, ["Silph Co 5F"] = {{32, 3}}, ["Silph Co Elevator"] = {{24, 5}}}
+mapLink["Silph Co 5F"] = {["Silph Co 9F"] = {{11, 24}}, ["Silph Co 3F"] = {{16, 9}, {3, 24}}, ["Silph Co 7F_A"] = {{35, 7}}, ["Silph Co 4F"] = {{28, 4}}, ["Silph Co 6F"] = {{32, 3}}, ["Silph Co Elevator"] = {{23, 5}}}
+mapLink["Silph Co 6F"] = {["Silph Co 2F"] = {{33, 7}}, ["Silph Co 4F"] = {{3, 8}}, ["Silph Co 5F"] = {{15, 4}}, ["Silph Co 7F_A"] = {{32, 3}}, ["Silph Co Elevator"] = {{23, 5}}}
+mapLink["Silph Co 7F_A"] = {["Silph Co 5F"] = {{26, 20}}, ["Silph Co 6F"] = {{19, 4}}, ["Silph Co 8F"] = {{29, 3}}, ["Silph Co Elevator"] = {{24, 5}}}
+mapLink["Silph Co 7F_B"] = {["Silph Co 11F_B"] = {{6, 11}}, ["Silph Co 3F"] = {{6, 6}}}
+mapLink["Silph Co 8F"] = {["Silph Co 2F"] = {{3, 21}, {11, 8}}, ["Silph Co 7F_A"] = {{16, 4}}, ["Silph Co 9F"] = {{30, 3}}, ["Silph Co Elevator"] = {{23, 5}}}
+mapLink["Silph Co 9F"] = {["Silph Co 5F"] = {{23, 22}}, ["Silph Co 3F"] = {{10, 6}}, ["Silph Co 8F"] = {{16, 4}}, ["Silph Co 10F"] = {{20, 3}}, ["Silph Co Elevator"] = {{25, 5}}}
+mapLink["Silph Co Elevator"] = {["Silph Co 1F"] = {{2, 5, 3, 5}}}
+mapLink["SSAnne 1F"] = {["SSAnne 2F"] = {{2, 11}}, ["SSAnne 1F Kitchen"] = {{2, 19}}, ["Vermilion City_A"] = {{15, 2}}, ["SSAnne 1F Room1"] = {{5, 13}}, ["SSAnne 1F Room2"] = {{7, 13}}, ["SSAnne 1F Room3"] = {{9, 13}}, ["SSAnne 1F Room4"] = {{11, 13}}, ["SSAnne 1F Room5"] = {{13, 13}}, ["SSAnne 1F Room6"] = {{15, 13}}, ["SSAnne 1F Room7"] = {{17, 13}}, ["SSAnne Basement"] = {{20, 18}}}
+mapLink["SSAnne 1F Kitchen"] = {["SSAnne 1F"] = {{7, 2}}}
+mapLink["SSAnne 1F Room1"] = {["SSAnne 1F"] = {{6, 2}}}
+mapLink["SSAnne 1F Room2"] = {["SSAnne 1F"] = {{6, 2}}}
+mapLink["SSAnne 1F Room3"] = {["SSAnne 1F"] = {{6, 2}}}
+mapLink["SSAnne 1F Room4"] = {["SSAnne 1F"] = {{6, 2}}}
+mapLink["SSAnne 1F Room5"] = {["SSAnne 1F"] = {{6, 2}}}
+mapLink["SSAnne 1F Room6"] = {["SSAnne 1F"] = {{6, 2}}}
+mapLink["SSAnne 1F Room7"] = {["SSAnne 1F"] = {{6, 2}}}
+mapLink["SSAnne 2F"] = {["SSAnne 2F Captain Room"] = {{27, 4}}, ["SSAnne 3F"] = {{2, 17}}, ["SSAnne 2F Room1"] = {{7, 15}}, ["SSAnne 2F Room2"] = {{10, 15}}, ["SSAnne 2F Room3"] = {{13, 15}}, ["SSAnne 2F Room4"] = {{16, 15}}, ["SSAnne 2F Room5"] = {{19, 15}}, ["SSAnne 2F Room6"] = {{22, 15}}, ["SSAnne 1F"] = {{4, 4}}}
+mapLink["SSAnne 2F Captain Room"] = {["SSAnne 2F"] = {{2, 11}}}
+mapLink["SSAnne 2F Room1"] = {["SSAnne 2F"] = {{5, 11}}}
+mapLink["SSAnne 2F Room2"] = {["SSAnne 2F"] = {{5, 11}}}
+mapLink["SSAnne 2F Room3"] = {["SSAnne 2F"] = {{5, 11}}}
+mapLink["SSAnne 2F Room4"] = {["SSAnne 2F"] = {{5, 11}}}
+mapLink["SSAnne 2F Room5"] = {["SSAnne 2F"] = {{5, 11}}}
+mapLink["SSAnne 2F Room6"] = {["SSAnne 2F"] = {{5, 11}}}
+mapLink["SSAnne 3F"] = {["Ballroom SS Anne"] = {{6, 7}}, ["SSAnne 3F Battle Room"] = {{15, 2}}, ["SSAnne 2F"] = {{27, 4}}}
+mapLink["SSAnne 3F Battle Room"] = {["SSAnne 3F"] = {{8, 15}}}
+mapLink["SSAnne Basement"] = {["SSAnne 1F"] = {{27, 4}}, ["SSAnne Basement Room1"] = {{22, 2}}, ["SSAnne Basement Room2"] = {{17, 2}}, ["SSAnne Basement Room3"] = {{12, 2}}, ["SSAnne Basement Room4"] = {{7, 2}}, ["SSAnne Basement Room5"] = {{2, 2}}}
+mapLink["SSAnne Basement Room1"] = {["SSAnne Basement"] = {{5, 11}}}
+mapLink["SSAnne Basement Room2"] = {["SSAnne Basement"] = {{5, 11}}}
+mapLink["SSAnne Basement Room3"] = {["SSAnne Basement"] = {{5, 11}}}
+mapLink["SSAnne Basement Room4"] = {["SSAnne Basement"] = {{5, 11}}}
+mapLink["SSAnne Basement Room5"] = {["SSAnne Basement"] = {{5, 11}}}
 --[[mapLink["Tohjo Falls"] = {["Route 27_A"] = {1, {["abilities"] = {"surf"}}}, ["Route 27_B"] = {1, {["abilities"] = {"surf"}}}}
 mapLink["Trainers Valley"] = {["Pokecenter Trainers Valley"] = {1}, ["Trainers Valley Station"] = {1}, ["Trainers Valley Stop"] = {1}}
 mapLink["Trainers Valley Station"] = {["Trainers Valley"] = {1}, ["Trainers Valley Station Floor 2"] = {1}}
@@ -358,7 +389,7 @@ mapLink["Underground1"] = {["Underground House 4"] = {{69, 5}}, ["Underground Ho
 mapLink["Underground2"] = {["Underground House 2"] = {{3, 43, 3, 44}}, ["Underground House 1"] = {{3, 2, 3, 3}}}
 --mapLink["Vermilion City Subway"] = {["Celadon City Subway"] = {K_SUBWAY}, ["Viridian City Subway"] = {K_SUBWAY}, ["Lavender Town Subway"] = {K_SUBWAY}, ["Fuchsia City Subway"] = {K_SUBWAY}, ["Saffron City Subway"] = {K_SUBWAY}, ["Pewter City Subway"] = {K_SUBWAY}, ["Pokecenter Vermilion"] = {0.2}, ["Cerulean City Subway"] = {K_SUBWAY}}
 mapLink["Vermilion City_B"] = {["Vermilion Gym"] = {{26, 51}}}
-mapLink["Vermilion City_A"] = {["Pokemon Club"] = {{23, 38}}, ["Vermilion House E"] = {{48, 49}}, ["Vermilion House D"] = {{47, 20}}, ["Vermilion House C"] = {{42, 21}}, ["Vermilion House B"] = {{69, 20}}, ["Vermilion House A"] = {{64, 20}}, ["VermilionHouse2Bottom"] = {{32, 21}}, ["Vermilion House 1"] = {{21, 20}}, ["Fisherman House - Vermilion"] = {{30, 37}}, ["Vermilion Pokemart"] = {{47, 37}}, ["Route 11"] = {{82, 39, 82, 42}}, ["Pokecenter Vermilion"] = {{27, 21}}, ["Route 6"] = {{41, 0, 43, 0}}}
+mapLink["Vermilion City_A"] = {["SSAnne 1F"] = {{39, 68, 41, 68}}, ["Pokemon Club"] = {{23, 38}}, ["Vermilion House E"] = {{48, 49}}, ["Vermilion House D"] = {{47, 20}}, ["Vermilion House C"] = {{42, 21}}, ["Vermilion House B"] = {{69, 20}}, ["Vermilion House A"] = {{64, 20}}, ["VermilionHouse2Bottom"] = {{32, 21}}, ["Vermilion House 1"] = {{21, 20}}, ["Fisherman House - Vermilion"] = {{30, 37}}, ["Vermilion Pokemart"] = {{47, 37}}, ["Route 11"] = {{82, 39, 82, 42}}, ["Pokecenter Vermilion"] = {{27, 21}}, ["Route 6"] = {{41, 0, 43, 0}}}
 mapLink["Vermilion City Graveyard"] = {["Route 6"] = {{60, 31, 60, 33}}}
 mapLink["Vermilion Gym"] = {["Vermilion City_B"] = {{6, 21}}}
 mapLink["Vermilion House 1"] = {["Vermilion City_A"] = {{4, 10, 5, 10}}}
@@ -402,5 +433,8 @@ mapLink["Viridian Pokemart"] = {["Viridian City"] = {{4, 11}}}
 --	["Link Area Name"] = {{X, Y}}, 
 --	["Link Area Name"] = {{minX, minY, maxX, maxY}}, 
 --}
+
+
+
 
 return mapLink
