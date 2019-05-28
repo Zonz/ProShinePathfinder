@@ -98,6 +98,14 @@ return {
         ["Route 20_A"] = {{0, 16, 51, 44}, {52, 41, 82, 44}, {77, 37, 82, 40}}, -- left / cinnabar
         ["Route 20_B"] = {{52, 20, 69, 40}, {70, 21, 83, 36}, {84, 24, 120, 38}} -- right / route 19
     },
+	["Rocket Hideout B1F"] = {
+		["Rocket Hideout B1F_A"] = {{1, 3, 24, 22}, {18, 23, 24, 31}}, -- top and right
+		["Rocket Hideout B1F_B"] = {{1, 28, 14, 40}} -- bottom left
+	},
+	["Rocket Hideout B4F"] = {
+		["Rocket Hideout B4F_A"] = {{1, 22, 22, 27}, {16, 3, 22, 21}}, -- bottom and right
+		["Rocket Hideout B4F_B"] = {{1, 3, 12, 17}} -- top left
+	},
     ["Seafoam 1F"] = {
         ["Seafoam 1F_A"] = {{63, 5, 79, 16}}, -- towards cinnabar
         ["Seafoam 1F_B"] = {{5, 5, 21, 17}} -- towards route 19
